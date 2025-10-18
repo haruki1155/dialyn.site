@@ -140,11 +140,11 @@ main {
 }
 
 .image-box.myself {
-  background-image: url('images/1.jpg');
+  background-image: url('1.jpg');
 }
 
 .image-box.family {
-  background-image: url('images/9.jpg');
+  background-image: url('9.jpg');
 }
 
 .image-box.friends {
@@ -152,7 +152,7 @@ main {
 }
 
 .image-box.cousin {
-  background-image: url('images/2.jpg');
+  background-image: url('2.jpg');
 }
 
 .gallery-item:hover .image-box {
@@ -174,3 +174,4 @@ main {
     width: 85%;
   }
 }
+
