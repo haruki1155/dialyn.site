@@ -1,0 +1,141 @@
+/* ---------- RESET & BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background: url(images/bg_image1.jpg) center/cover no-repeat fixed;
+  color: #fff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.photo-gallery {
+  display: grid;
+  place-items: center; /* centers all grid items evenly */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;       /* ensures gallery is centered horizontally */
+  justify-content: center;
+  align-content: center; /* ensures gallery centers vertically if there’s extra space */
+}
+/* ---------- HEADER AREA ---------- */
+.gallery-header {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  margin: 1.5rem auto 0 auto;
+
+}
+
+.gallery-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ---------- BACK BUTTON ---------- */
+.back-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0);
+  backdrop-filter: blur(6px);
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ---------- PHOTO GALLERY GRID ---------- */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 2rem;
+}
+
+/* Each photo card */
+.photo-item {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* keeps uniform square layout */
+  overflow: hidden;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.photo-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.photo-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 992px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .gallery-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}

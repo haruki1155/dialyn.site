@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style_gallery.css">
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="sidebar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Gallery Section -->
+ <main>
+<section class="gallery">
+  <a href="myself.html" class="gallery-item">
+    <div class="image-box myself"></div>
+    <div class="caption">Myself</div>
+  </a>
+
+  <a href="family.html" class="gallery-item">
+    <div class="image-box family"></div>
+    <div class="caption">Family</div>
+  </a>
+
+  <a href="friends.html" class="gallery-item">
+    <div class="image-box friends"></div>
+    <div class="caption">Friends</div>
+  </a>
+
+  <a href="cousin.html" class="gallery-item">
+    <div class="image-box cousin"></div>
+    <div class="caption">Cousin</div>
+  </a>
+</section>
+
+</main>
+
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const sidebar = document.getElementById('sidebar');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

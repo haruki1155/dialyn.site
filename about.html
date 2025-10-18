@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Page</title>
+  <link rel="stylesheet" href="style_about.css">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    
+    <div class="overview">
+      <h2>ABOUT ME</h2>
+    <div class="Description_info1">
+      <p>
+       Life is all about the thrill of the ride and the magic of stories.  There's nothing quite like the feeling of freedom on the open road, the wind rushing past, and the endless possibilities waiting ahead. Every ride is an adventure, a chance to explore new places, meet new people, and create unforgettable memories.
+      </p>
+      </div>
+    </div>
+
+   
+    <div class="Description_info">
+      <p>
+        But when the journey pauses, another adventure begins—inside the pages of a Wattpad story. In books, I find new worlds to escape to, stories that make my heart race, characters that feel like friends, and moments that stay with me long after I turn the last page. Whether it’s the adrenaline of a high-speed ride or the emotions of a beautifully written story, I live for the excitement of the journey—both on the road and in the pages of a book.
+      </p>
+
+      <div class="middle_partition">
+
+      </div>        
+      </div>
+
+   
+    <div class="image-section">
+      <div class="image-container">
+        <img src="images/about_img.png" alt="My Image">
+        
+      </div>
+    </di>
+  </main>
+
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('navMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>

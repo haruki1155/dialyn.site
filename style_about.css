@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html, body {
+  min-height: 100%;
+  width: 100%;
+  color: #000000;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background: url(images/bg_image1.jpg) center/cover no-repeat fixed;
+  font-family: "Inter", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 5rem 5% 3rem 5%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  left: 1.5rem;
+  top: 1.5rem;
+  z-index: 1000;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: #3a3250;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+nav {
+  position: fixed;
+  left: -100%;
+  top: 0;
+  height: 100vh;
+  width: 220px;
+  background-color: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  padding-top: 5rem;
+  z-index: 999;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 2rem;
+}
+
+nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav.active {
+  left: 0;
+}
+
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+
+.overview {
+  grid-column: span 12;
+  text-align: center;
+  font-size: larger;
+  padding: 2rem;
+  background: transparent;
+}
+
+.overview h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.Description_info1 p {
+  color: #ffffff;
+  line-height: 1.6;
+  max-width: 1399px;
+  margin: 0 auto 0 0px;
+  padding-left: 3rem;
+  text-align: end;
+}
+
+
+.Description_info {
+  grid-column: span 9;
+  background: transparent;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.Description_info p {
+  text-align: left;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 30px;
+  font-size: larger;
+}
+
+.image-section {
+  grid-column: span 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+
+.image-container img {
+  width: 340px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 992px) {
+  main {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .overview,
+  .Description_info,
+  .image-section {
+    grid-column: span 12;
+  }
+
+  nav {
+    width: 180px;
+  }
+}
